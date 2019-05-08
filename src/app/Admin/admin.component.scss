@@ -1,0 +1,24 @@
+
+.container-layout{
+    height: 100%;
+}
+.drawer-sidenav{
+    border: 0;
+    min-width: 15%;
+
+}
+
+.toolbar-main{
+position:fixed;
+
+top:0
+
+}
+  
+.container-body{
+    max-height: 90%;
+    max-width: 100%;
+    overflow: auto;   
+   
+}
+

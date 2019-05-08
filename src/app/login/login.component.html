@@ -1,4 +1,25 @@
-<div class="example-container">
-  <form class="example-container" [formGroup]="options">
-  </form>
-</div>
+
+  <div class="container"  fxFlexFill  fxLayoutAlign="center center">
+    <div fxFlex="20" class="sec1" fxFlex.xs="100" >
+      <form [formGroup]="loginForm" #userForm="ngForm">
+        <mat-card class="login-card">
+          <mat-card-title> Login</mat-card-title>
+          <mat-card-content>
+            <div>
+                <div class="form-group">
+                  <mat-form-field class="example-full-width">
+                    <input matInput [class.is-invalid]="loginForm.get('Nome').invalid && loginForm.get('Nome').touched" formControlName="Nome" placeholder="Nome" #nome name="Nome" class="form-control" >
+                  </mat-form-field>
+                </div>
+                <div class="form-group">
+                  <mat-form-field class="example-full-width">
+                      <input matInput formControlName="Senha" type="password" placeholder="Senha" #password name="senha" class="form-control" >
+                  </mat-form-field>
+                </div>
+            </div>
+          </mat-card-content>
+          <button mat-stroked-button [disabled]="userForm.form.invalid" (click)="onSubmit()">Login</button>
+        </mat-card>
+      </form>
+    </div>
+  </div>
