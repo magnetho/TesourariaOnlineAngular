@@ -5,7 +5,7 @@
 export const environment = {
   production: false,
   //apiServer: 'http://10.91.142.186/tesourariaonline/api/'
-  apiServer: 'http://localhost:53186/api/'
+  apiServer: 'http://localhost:5344/api/'
 };
 
 /*

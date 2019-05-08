@@ -31,13 +31,18 @@ export class AuthService {
                     .subscribe(data => {
                       console.log(data);
                       if(data != null)
+                      {
                         this.SalvarContextoUsuario(data);
+                        this.router.navigate(['admin']);
+                      }
                       else
+                      {
                         alert("email ou senha incorretos");
+                      }
                     });
   }
 
-  logout(){
+  Logout(){
     localStorage.removeItem('user');
     this.router.navigate(['login']);
   }

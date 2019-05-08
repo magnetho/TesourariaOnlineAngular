@@ -68,7 +68,7 @@
       <mat-menu #appMenu="matMenu">
           <button mat-menu-item>Perfil</button>
           <button mat-menu-item>Settings</button>
-          <button  mat-menu-item >Logout</button>
+          <button  mat-menu-item (click)="authService.Logout()">Logout</button>
         </mat-menu> 
         
         <div class="container-body">

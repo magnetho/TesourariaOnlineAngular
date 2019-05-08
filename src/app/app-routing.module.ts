@@ -3,6 +3,7 @@ import { LoginComponent } from './login/login.component';
 import { NgModule } from '@angular/core';
 import { HomeComponent } from './Admin/home/home.component';
 import { AdminComponent } from './admin/admin.component';
+import { AdminGuard } from './admin.guard';
 
 const routes: Routes = [
     {
@@ -13,8 +14,16 @@ const routes: Routes = [
     {
         path: 'login', component: LoginComponent
     },
-    {path:'home', component: HomeComponent},
-    {path:'admin', component: AdminComponent}
+    {
+        path:'home', 
+        component: HomeComponent,
+        canActivate: [AdminGuard]
+    },
+    {
+        path:'admin', 
+        component: AdminComponent,
+        canActivate: [AdminGuard]
+    }
 ];
 
 @NgModule({
