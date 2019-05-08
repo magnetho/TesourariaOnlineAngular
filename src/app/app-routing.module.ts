@@ -1,9 +1,10 @@
 import { RouterModule, Routes } from '@angular/router';
 import { LoginComponent } from './login/login.component';
 import { NgModule } from '@angular/core';
-import { HomeComponent } from './Admin/home/home.component';
-import { AdminComponent } from './admin/admin.component';
 import { AdminGuard } from './admin.guard';
+import { HomeComponent } from './admin/home/home.component';
+import { AdminComponent } from './admin/admin.component';
+import { MovimentoComponent } from './admin/movimento/movimento.component';
 
 const routes: Routes = [
     {
@@ -15,14 +16,27 @@ const routes: Routes = [
         path: 'login', component: LoginComponent
     },
     {
-        path:'home', 
-        component: HomeComponent,
-        canActivate: [AdminGuard]
-    },
-    {
         path:'admin', 
         component: AdminComponent,
-        canActivate: [AdminGuard]
+        canActivate: [AdminGuard],
+        children: [
+            {
+                path: '',
+                pathMatch: 'full',
+                redirectTo: 'home',
+                canActivate: [AdminGuard]
+            },
+            {
+                path: 'home',
+                component: HomeComponent,
+                canActivate: [AdminGuard]
+            },
+            {
+                path: 'movimento',
+                component: MovimentoComponent,
+                canActivate: [AdminGuard]
+            }
+        ]
     }
 ];
 

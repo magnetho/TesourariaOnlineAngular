@@ -7,22 +7,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  open:boolean;
   constructor() { }
 
   ngOnInit() {
-
-    this.open= true;
   }
-
-  toggle(){
-    if(this.open){
-      this.open = false;
-    }else{
-      this.open = true
-    }
-  }
-
-
 
 }

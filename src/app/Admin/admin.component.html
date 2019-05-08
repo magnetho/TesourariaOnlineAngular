@@ -11,7 +11,7 @@
                       <mat-icon  color="primary"  matListIcon>home</mat-icon>
                       <h2 class="primary-color" matLine> Home </h2>                   
                     </a>
-                    <a  mat-list-item matRipple href="#" >
+                    <a  mat-list-item matRipple [routerLink]="['movimento']">
                         <mat-icon matListIcon>person</mat-icon>
                         <h2 matLine> Movimentações </h2>                   
                       </a>
@@ -72,7 +72,7 @@
         </mat-menu> 
         
         <div class="container-body">
-
+            <router-outlet></router-outlet>
         </div>
 
 
