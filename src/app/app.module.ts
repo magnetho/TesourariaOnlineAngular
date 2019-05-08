@@ -5,9 +5,9 @@ import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
 import { MaterialModule } from './material/material.module';
 import { AppRoutingModule } from './app-routing.module';
-import { TesetComponent } from './teset/teset.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { HttpClientModule } from '@angular/common/http';
 import { HomeComponent } from './Admin/home/home.component';
 import { AdminComponent } from './admin/admin.component';
 
@@ -15,7 +15,6 @@ import { AdminComponent } from './admin/admin.component';
   declarations: [
     AppComponent,
     LoginComponent,
-    TesetComponent,
     HomeComponent,
     AdminComponent
   ],
@@ -24,7 +23,8 @@ import { AdminComponent } from './admin/admin.component';
     MaterialModule,
     AppRoutingModule,
     ReactiveFormsModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
