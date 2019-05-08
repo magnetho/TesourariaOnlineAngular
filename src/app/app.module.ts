@@ -8,12 +8,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { TesetComponent } from './teset/teset.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { HomeComponent } from './Admin/home/home.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
-    TesetComponent
+    TesetComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,

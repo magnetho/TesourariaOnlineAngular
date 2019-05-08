@@ -12,11 +12,16 @@
 // Define the palettes for your theme using the Material Design palettes available in palette.scss
 // (imported above). For each palette, you can optionally specify a default, lighter, and darker
 // hue. Available color palettes: https://material.io/design/color/
-$TesourariaOnlineAngular-primary: mat-palette($mat-indigo);
+
+$TesourariaOnlineAngular-primary: mat-palette($mat-cyan,700);
 $TesourariaOnlineAngular-accent: mat-palette($mat-pink, A200, A100, A400);
 
 // The warn palette is optional (defaults to red).
 $TesourariaOnlineAngular-warn: mat-palette($mat-red);
+
+$TesourariaOnlineAngular-menu: mat-palette($mat-teal);
+
+
 
 // Create the theme object (a Sass map containing all of the palettes).
 $TesourariaOnlineAngular-theme: mat-light-theme($TesourariaOnlineAngular-primary, $TesourariaOnlineAngular-accent, $TesourariaOnlineAngular-warn);
@@ -46,3 +51,56 @@ body {
   font-size: 8pt;
   float: right;
 }
+
+//colores primarias com tonalidades diferentes 
+.primary-50{
+  background-color:map-get($TesourariaOnlineAngular-primary,50);
+  color: map-get($TesourariaOnlineAngular-primary,default-contrast )
+}
+
+.primary-100{
+  background-color:map-get($TesourariaOnlineAngular-primary,100);
+  color: map-get($TesourariaOnlineAngular-primary,default-contrast )
+}
+.primary-200{
+  background-color:map-get($TesourariaOnlineAngular-primary,200);
+  color: map-get($TesourariaOnlineAngular-primary,default-contrast )
+}
+.primary-300{
+  background-color:map-get($TesourariaOnlineAngular-primary,300);
+  color: map-get($TesourariaOnlineAngular-primary,default-contrast )
+}
+.primary-400{
+  background-color:map-get($TesourariaOnlineAngular-primary,400);
+  color: map-get($TesourariaOnlineAngular-primary,default-contrast )
+}
+
+.primary-600{
+  background-color:map-get($TesourariaOnlineAngular-primary,600);
+  color: map-get($TesourariaOnlineAngular-primary,default-contrast )
+}
+.primary-700{
+  background-color:map-get($TesourariaOnlineAngular-primary,700);
+  color: map-get($TesourariaOnlineAngular-primary,default-contrast )
+}
+
+.primary-800{
+  background-color:map-get($TesourariaOnlineAngular-primary,800);
+  color: map-get($TesourariaOnlineAngular-primary,default-contrast )
+}
+
+.primary-900{
+  background-color:map-get($TesourariaOnlineAngular-primary,900);
+  color: map-get($TesourariaOnlineAngular-primary,default-contrast )
+}
+
+a.mat-list-item{
+  text-decoration: none;
+}
+.primary-color{
+  color:map-get($TesourariaOnlineAngular-primary,default);
+}
+
+
+
+
