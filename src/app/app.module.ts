@@ -8,15 +8,18 @@ import { AppRoutingModule } from './app-routing.module';
 import { ReactiveFormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule } from '@angular/common/http';
-import { HomeComponent } from './Admin/home/home.component';
 import { AdminComponent } from './admin/admin.component';
+import { MovimentoComponent } from './admin/movimento/movimento.component';
+import { HomeComponent } from './admin/home/home.component';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     HomeComponent,
-    AdminComponent
+    AdminComponent,
+    MovimentoComponent
   ],
   imports: [
     BrowserModule,
@@ -24,7 +27,8 @@ import { AdminComponent } from './admin/admin.component';
     AppRoutingModule,
     ReactiveFormsModule,
     BrowserAnimationsModule,
-    HttpClientModule
+    HttpClientModule,
+    RouterModule
   ],
   providers: [],
   bootstrap: [AppComponent]
