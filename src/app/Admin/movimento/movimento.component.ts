@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import {FormBuilder, FormGroup} from '@angular/forms';
 @Component({
   selector: 'app-movimento',
   templateUrl: './movimento.component.html',
@@ -7,7 +7,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MovimentoComponent implements OnInit {
 
-  constructor() { }
+
+  constructor(fb: FormBuilder) {
+   
+  }
+
 
   ngOnInit() {
   }
