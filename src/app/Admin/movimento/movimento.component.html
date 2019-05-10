@@ -1,0 +1,71 @@
+
+<div fxLayout="column">    
+    <div fxFlex>
+        <mat-card>
+            <mat-card-title>Filtro</mat-card-title>
+            <mat-card-content>
+                <form [formGroup]="pesquisaForm">
+                    <div fxLayout="column" >
+                        <div fxFlex>
+                            {{pesquisaForm.value | json}}
+                            <mat-form-field>
+                                    <input matInput [matDatepicker]="dataAlteracao" formControlName="dataAlteracao" placeholder="Data Alteração">
+                                    <mat-datepicker-toggle matSuffix [for]="dataAlteracao"></mat-datepicker-toggle>
+                                    <mat-datepicker #dataAlteracao></mat-datepicker>
+                            </mat-form-field>
+                        </div>
+                        <div fxFlex>
+                            <mat-form-field>
+                                <mat-label>Status</mat-label>
+                                <mat-select formControlName="status">
+                                    <mat-option *ngFor="let s of status" value="{{ s.value }}">{{ s.text }}</mat-option>
+                                </mat-select>
+                            </mat-form-field>
+                        </div>
+                        <div fxFlex fxLayoutAlign="center">
+                                <button mat-stroked-button (click)="pesquisar()">Pesquisar</button>
+                        </div>
+                    </div>
+                </form>
+            </mat-card-content>
+        </mat-card>
+    </div>
+
+    <div fxFlex>
+        <mat-card>
+            <mat-card-title>Movimentos</mat-card-title>
+            <mat-card-content>
+                <table mat-table matSort [dataSource]="dataSource">
+                    <ng-container matColumnDef="movimentoId">
+                        <th mat-header-cell *matHeaderCellDef mat-sort-header>Id</th>
+                        <td mat-cell *matCellDef="let movimento">{{ movimento.movimentoId }}</td>
+                    </ng-container>
+
+                    <ng-container matColumnDef="descricao">
+                        <th mat-header-cell *matHeaderCellDef mat-sort-header>Descrição</th>
+                        <td mat-cell *matCellDef="let movimento">{{movimento.descricao}}</td>
+                    </ng-container>
+
+                    <ng-container matColumnDef="data">
+                        <th mat-header-cell *matHeaderCellDef mat-sort-header>Data Movimento</th>
+                        <td mat-cell *matCellDef="let movimento">{{movimento.data}}</td>
+                    </ng-container>
+
+                    <ng-container matColumnDef="usuario">
+                        <th mat-header-cell *matHeaderCellDef mat-sort-header>Usuário</th>
+                        <td mat-cell *matCellDef="let movimento">{{movimento.usuario}}</td>
+                    </ng-container>
+
+                    <ng-container matColumnDef="status">
+                        <th mat-header-cell *matHeaderCellDef mat-sort-header>Status</th>
+                        <td mat-cell *matCellDef="let movimento">{{movimento.status}}</td>
+                    </ng-container>
+
+                    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                    <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+                </table>
+            </mat-card-content>
+        </mat-card>
+
+    </div>
+</div>
