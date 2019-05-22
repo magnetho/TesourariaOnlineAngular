@@ -1,0 +1,21 @@
+﻿{
+    "tools" : "Tools",
+    "home" : "Home",
+    "movements" : "Movements",
+    "score" : "Score",
+    "expenses" : "Expenses",
+    "reports" : "Reports",
+    "extract" : "Extract",
+    "conference" : "Conference",
+    "receipt" : "Receipt",
+    "profile" : "Profile",
+    "settings" : "Settings",
+    "logout" : "Logout",
+    "language" : "Language",
+    "" : "",
+    "BUTTONS" : {
+        "btn_en" : "English",
+        "btn_ptBR" : "Portuguese (BR)"
+    },
+    "FOO" : "Foo {{test}}"
+}

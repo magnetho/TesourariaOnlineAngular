@@ -1,0 +1,20 @@
+﻿{
+    "tools" : "Ferramentas",
+    "home" : "Início",
+    "movements" : "Movimentações",
+    "score" : "Contagem",
+    "expenses" : "Despesas",
+    "reports" : "Relatórios",
+    "extract" : "Extrato",
+    "conference" : "Conferencia",
+    "receipt" : "Recibo",
+    "profile" : "Perfil",
+    "settings" : "Configurações",
+    "logout" : "Sair",
+    "language" : "Idioma",
+    "BUTTONS" : {
+        "btn_en" : "Inglês",
+        "btn_ptBR" : "Português (BR)"
+    },
+    "FOO" : "Foo {{test}}"
+}

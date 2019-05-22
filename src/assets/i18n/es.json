@@ -1,0 +1,16 @@
+﻿{
+    "tools" : "Herramientas",
+    "home" : "Inicio",
+    "movements" : "Movimientos",
+    "score" : "Cuenta",
+    "expenses" : "Gastos",
+    "reports" : "Informes",
+    "extract" : "Extracto",
+    "conference" : "Conferencia",
+    "receipt" : "Recibo",
+    "profile" : "Perfil",
+    "settings" : "Ajustes",
+    "logout" : "Salir",
+    "language" : "Idioma",
+    "" : ""
+}
