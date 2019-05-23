@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
-import { Usuario } from '../usuario';
+import { Usuario } from 'src/app/models/usuario';
 import { HttpParams, HttpClient } from '@angular/common/http';
 import { environment } from 'src/environments/environment';
 
@@ -29,7 +29,6 @@ export class AuthService {
     });
     this.httpClient.get<Usuario>(environment.apiServer + "login", {params})
                     .subscribe(data => {
-                      console.log(data);
                       if(data != null)
                       {
                         this.SalvarContextoUsuario(data);
