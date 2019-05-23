@@ -4,8 +4,8 @@
 
 export const environment = {
   production: false,
-  apiServer: 'http://10.91.142.186/tesourariaonline/api/'
-  //apiServer: 'https://localhost:44364/api/'
+  //apiServer: 'http://10.91.142.186/tesourariaonline/api/'
+  apiServer: 'http://localhost:53186/api/'
 };
 
 /*

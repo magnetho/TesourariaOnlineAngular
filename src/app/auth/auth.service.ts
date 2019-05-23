@@ -29,11 +29,9 @@ export class AuthService {
     });
     this.httpClient.get<Usuario>(environment.apiServer + "login", {params})
                     .subscribe(data => {
-                      console.log(data);
                       if(data != null)
                       {
                         this.SalvarContextoUsuario(data);
-                        this.router.navigate(['admin']);
                       }
                       else
                       {

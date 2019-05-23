@@ -5,6 +5,7 @@ import { AdminGuard } from './admin.guard';
 import { HomeComponent } from './admin/home/home.component';
 import { AdminComponent } from './admin/admin.component';
 import { MovimentoComponent } from './admin/movimento/movimento.component';
+import { ContagemComponent } from './admin/contagem/contagem.component';
 
 const routes: Routes = [
     {
@@ -35,7 +36,15 @@ const routes: Routes = [
                 path: 'movimento',
                 component: MovimentoComponent,
                 canActivate: [AdminGuard]
+            ,},
+            {
+                path: 'contagem',
+                component: ContagemComponent,
+                canActivate: [AdminGuard]
             }
+
+
+
         ]
     }
 ];
