@@ -22,6 +22,8 @@
     "@angular/platform-browser": "~7.2.0",
     "@angular/platform-browser-dynamic": "~7.2.0",
     "@angular/router": "~7.2.0",
+    "@ngx-translate/core": "^11.0.1",
+    "@ngx-translate/http-loader": "^4.0.0",
     "angular-material": "^1.1.18",
     "angular2-text-mask": "^9.0.0",
     "c": "^0.1.0",

@@ -6,39 +6,39 @@
       </mat-toolbar> 
     <div id="container-menu" >
             <mat-list>   
-                  <h2 mat-subheader >Ferramentas</h2>           
+                  <h2 mat-subheader ><span class="hidden-xs">{{ 'tools' | translate }}</span></h2>           
                     <a   mat-list-item matRipple [routerLink]="['home']" >
                       <mat-icon  color="primary"  matListIcon>home</mat-icon>
-                      <h2 class="primary-color" matLine> Home </h2>                   
+                      <h2 class="primary-color" matLine><span class="hidden-xs">{{ 'home' | translate }}</span> </h2>                   
                     </a>
                     <a  mat-list-item matRipple [routerLink]="['movimento']">
                         <mat-icon matListIcon>person</mat-icon>
-                        <h2 matLine> Movimentações </h2>                   
+                        <h2 matLine> <span class="hidden-xs">{{ 'movements' | translate }}</span> </h2>                   
                       </a>
                       <a  mat-list-item matRipple  [routerLink]="['contagem']">
-                          <mat-icon matListIcon>account_balance_wallet</mat-icon>
-                          <h2 matLine> Contagem </h2>                   
+                          <mat-icon matListIcon>person</mat-icon>
+                          <h2 matLine> <span class="hidden-xs">{{ 'score' | translate }}</span> </h2>                   
                         </a>
                         <a  mat-list-item matRipple href="#" >
                             <mat-icon matListIcon>person</mat-icon>
-                            <h2 matLine> Despesas </h2>                   
+                            <h2 matLine> <span class="hidden-xs">{{ 'expenses' | translate }}</span> </h2>                   
                           </a>
 
-                    <h2 mat-subheader >Relatórios</h2>  
+                    <h2 mat-subheader ><span class="hidden-xs">{{ 'reports' | translate }}</span></h2>  
                     
                     <a  mat-list-item matRipple href="#" >
                         <mat-icon matListIcon>account_balance</mat-icon>
-                        <h2 matLine> Extrato </h2>                   
+                        <h2 matLine> <span class="hidden-xs">{{ 'extract' | translate }}</span> </h2>                   
                       </a>
                           
                     <a  mat-list-item matRipple href="#" >
                         <mat-icon matListIcon>assignment</mat-icon>
-                        <h2 matLine> Conferencia </h2>                   
+                        <h2 matLine> <span class="hidden-xs">{{ 'conference' | translate }}</span>  </h2>                   
                       </a>
                           
                     <a  mat-list-item matRipple href="#" >
                         <mat-icon matListIcon>receipt</mat-icon>
-                        <h2 matLine> Recibo </h2>                   
+                        <h2 matLine> <span class="hidden-xs">{{ 'receipt' | translate }}</span>  </h2>                   
                       </a>
   
 
@@ -51,32 +51,28 @@
  
   <mat-drawer-content >
       <mat-toolbar  fxLayout="row"  color="primary" class="mat-elevation-z3 " >
-          <div >
-              <button mat-icon-button (click)="drawer.toggle()"><mat-icon>menu</mat-icon></button>
-          </div>
-           
-    
-          <span fxFlex="1 1 auto"></span>
-    
-            <button mat-icon-button [matMenuTriggerFor]="appMenu">
-                <mat-icon>person</mat-icon>
-              </button>
-    
-            <button  mat-icon-button> <mat-icon>settings</mat-icon> </button>
-        </mat-toolbar> 
-
+        <div >
+          <button mat-icon-button (click)="drawer.toggle()"><mat-icon>menu</mat-icon></button>
+        </div>         
+        <span fxFlex="1 1 auto"></span>
+        <button mat-icon-button [matMenuTriggerFor]="appMenu">
+          <mat-icon>settings</mat-icon>
+        </button>
+      </mat-toolbar> 
       <mat-menu #appMenu="matMenu">
-          <button mat-menu-item>Perfil</button>
-          <button mat-menu-item>Settings</button>
-          <button  mat-menu-item (click)="authService.Logout()">Logout</button>
-        </mat-menu> 
-        
-        <div class="container-body">
-            <router-outlet></router-outlet>
-        </div>
+        <button mat-menu-item><mat-icon>person</mat-icon>{{ 'profile' | translate }}</button>
+        <button mat-menu-item [matMenuTriggerFor]="languageMenu"><mat-icon>language</mat-icon>{{ 'language' | translate }}</button>
+        <button  mat-menu-item (click)="authService.Logout()"><mat-icon>exit_to_app</mat-icon>{{ 'logout' | translate }}</button>
+      </mat-menu> 
+      <div class="container-body">
+          <router-outlet></router-outlet>
+      </div>
+      <mat-menu #languageMenu="matMenu">
+        <button mat-menu-item (click)="switchLanguage('en')">EN</button>
+        <button mat-menu-item (click)="switchLanguage('pt')">PT</button>
+        <button mat-menu-item (click)="switchLanguage('es')">ES</button>        
+      </mat-menu> 
+  </mat-drawer-content> 
 
 
-
-  </mat-drawer-content>
-  
 </mat-drawer-container>

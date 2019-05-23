@@ -1,10 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { Usuario } from '../usuario';
+import { Usuario } from '../models/usuario';
 import { FormGroup, FormControl, FormBuilder, Validators } from '@angular/forms';
-import { HttpService } from './http.service';
-import { config } from 'rxjs';
-import { JsonPipe } from '@angular/common';
-import { AuthService } from '../auth/auth.service';
+import { AuthService } from '../services/auth.service';
 
 @Component({
   selector: 'app-login',
@@ -12,7 +9,12 @@ import { AuthService } from '../auth/auth.service';
   styleUrls: ['./login.component.scss']
 })
 export class LoginComponent implements OnInit {
-  constructor(private fb: FormBuilder, private authService: AuthService) {}
+  constructor(
+    private fb: FormBuilder, 
+    private authService: AuthService
+    ) {
+      
+    }
 
   loginForm = this.fb.group({
     Nome: ['', [Validators.required, Validators.minLength(3)]],
