@@ -9,7 +9,11 @@ import { TranslateService } from '@ngx-translate/core';
 })
 export class AdminComponent implements OnInit {
   public language = navigator.language;
+
   constructor(private translate: TranslateService) {
+    if (window.localStorage.languageCache != null || window.localStorage.languageCache != undefined){
+      this.language = window.localStorage.getItem('languageCache');
+    }
     if (this.language != null ){
       if (this.language == 'en'        
         ||this.language == 'eng'
@@ -61,9 +65,9 @@ export class AdminComponent implements OnInit {
     
   public switchLanguage(language: string) {
     this.translate.use(language);
-
+    window.localStorage.setItem('languageCache', language); 
   }
-  
+
   ngOnInit() {
   }
 
