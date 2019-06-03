@@ -25,20 +25,14 @@ export class PerfilComponent implements OnInit {
   
   ngOnInit() {
   }
-}
 
-export class SelectOverviewExample {
-  foods: Food[] = [
-    {value: 'steak-0', viewValue: 'Steak'},
-    {value: 'pizza-1', viewValue: 'Pizza'},
-    {value: 'tacos-2', viewValue: 'Tacos'}
-  ];
+  public submit(){
+    window.alert('Enviado');
+  }
+
+  public cancel(){
+    window.alert('Cancelado');
+  }
 }
 
 export class AppComponent  {}
-
-export class FormFieldAppearanceExample {}
-
-export class DatepickerTouchExample {}
-
-export class ButtonTypesExample {}

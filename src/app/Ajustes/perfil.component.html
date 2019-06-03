@@ -16,12 +16,30 @@
                     <mat-form-field appearance="legacy" class="inputLeft">
                         <input matInput placeholder="{{ 'newPasswordConfirm' | translate }}">
                     </mat-form-field>
-                    <p><mat-divider></mat-divider></p><br>
+                    <p></p><br>
                     <div class="example-button-row">
-                        <button mat-raised-button color="primary" >{{ 'submit' | translate }}</button>
-                        <button mat-raised-button >{{ 'cancel' | translate }}</button>                        
-                    </div>
-                    
+                        <button mat-raised-button color="primary" (click)="submit()" >{{ 'submit' | translate }}</button>
+                        <button mat-raised-button (click)="cancel()">{{ 'cancel' | translate }}</button>                        
+                    </div>                 
+                </mat-card-content>
+            </mat-card>
+        </div>
+    </div>
+</div>      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
                     <!-- <p><mat-checkbox></mat-checkbox></p>
                     <p><mat-radio-button></mat-radio-button><mat-radio-button></mat-radio-button></p>
                     <mat-form-field>
@@ -47,9 +65,3 @@
                     <p><button md-raised-button color="primary" class="mat-stroked-button" (click)="fileInput.click()">Upload</button>
                         <input hidden type="file" #fileInput></p>     -->
                     
-                        
-                </mat-card-content>
-            </mat-card>
-        </div>
-    </div>
-</div>      
