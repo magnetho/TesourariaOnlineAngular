@@ -12,9 +12,10 @@
     "settings" : "Configurações",
     "logout" : "Sair",
     "language" : "Idioma",
-    "BUTTONS" : {
-        "btn_en" : "Inglês",
-        "btn_ptBR" : "Português (BR)"
-    },
-    "FOO" : "Foo {{test}}"
+    "name" : "Nome",
+    "email" : "E-mail",
+    "newPassword" : "Nova Senha",
+    "newPasswordConfirm" : "Confirmar Nova Senha",
+    "submit" : "Enviar",
+    "cancel" : "Cancelar"
 }
