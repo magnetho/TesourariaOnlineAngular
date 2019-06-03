@@ -1,0 +1,32 @@
+.container {
+    width: 60%;
+    margin: 3% auto;
+  }
+
+  .inputRight {
+    width: 48%;
+    margin-right: 2%;
+  }
+
+  .inputLeft {
+    width: 48%;
+    margin-left: 2%;
+  }
+
+  .inputFull {
+    width: 100%;
+  }
+
+  .pullright{
+    float: right;
+  }
+
+ .example-button-row button,
+.example-button-row a {
+  margin-right: 8px;
+  float: right;
+
+    bottom: 28px;
+    right: -10px;
+}
+  

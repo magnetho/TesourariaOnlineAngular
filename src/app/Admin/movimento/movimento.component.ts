@@ -1,10 +1,10 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import {FormBuilder, FormGroup, Validators} from '@angular/forms';
-import { Status } from './status.model';
+import { Status } from 'src/app/models/status.model';
 import { analyzeAndValidateNgModules } from '@angular/compiler';
-import { MovimentoService } from './movimento.service';
+import { MovimentoService } from '../../services/movimento.service';
 import { MatTableDataSource, MatPaginator, MatSort } from '@angular/material';
-import { Movimento } from './movimento.model';
+import { Movimento } from 'src/app/models/movimento.model';
 @Component({
   selector: 'app-movimento',
   templateUrl: './movimento.component.html',

@@ -12,10 +12,12 @@
     "settings" : "Settings",
     "logout" : "Logout",
     "language" : "Language",
-    "" : "",
-    "BUTTONS" : {
-        "btn_en" : "English",
-        "btn_ptBR" : "Portuguese (BR)"
-    },
-    "FOO" : "Foo {{test}}"
+    "name" : "Name",
+    "email" : "E-mail",
+    "newPassword" : "New Password",
+    "newPasswordConfirm" : "New Password Confirm",
+    "submit" : "Submit",
+    "cancel" : "Cancel",
+    "" : ""
+    
 }

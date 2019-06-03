@@ -1,0 +1,55 @@
+<div class="container">
+    <div fxLayout="column"> 
+        <div fxFlex>
+            <mat-card>
+                <mat-card-title>{{ 'settings' | translate }}</mat-card-title>
+                <mat-card-content>
+                    <mat-form-field appearance="legacy" class="inputFull">
+                        <input matInput  placeholder="{{ 'name' | translate }}">
+                    </mat-form-field>
+                    <mat-form-field appearance="legacy" class="inputFull">
+                        <input matInput placeholder="{{ 'email' | translate }}">
+                    </mat-form-field>
+                    <mat-form-field appearance="legacy" class="inputRight">
+                        <input matInput placeholder="{{ 'newPassword' | translate }}">
+                    </mat-form-field> 
+                    <mat-form-field appearance="legacy" class="inputLeft">
+                        <input matInput placeholder="{{ 'newPasswordConfirm' | translate }}">
+                    </mat-form-field>
+                    <p><mat-divider></mat-divider></p><br>
+                    <div class="example-button-row">
+                        <button mat-raised-button color="primary" >{{ 'submit' | translate }}</button>
+                        <button mat-raised-button >{{ 'cancel' | translate }}</button>                        
+                    </div>
+                    
+                    <!-- <p><mat-checkbox></mat-checkbox></p>
+                    <p><mat-radio-button></mat-radio-button><mat-radio-button></mat-radio-button></p>
+                    <mat-form-field>
+                        <mat-label>Favorite food</mat-label>
+                        <mat-select>
+                        <mat-option value="option1">Option 1  </mat-option>
+                        <mat-option value="option2">Option 2 </mat-option>
+                        <mat-option value="option3">Option 3 </mat-option>
+                        <mat-option value="option4">Option 4 </mat-option>
+                        </mat-select>
+                        <p></p>
+
+                    <p><mat-divider></mat-divider></p>
+
+                    <mat-form-field >
+                        <input matInput [matDatepicker]="picker" placeholder="{{ 'birthDate' | translate }}">
+                        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                        <mat-datepicker touchUi #picker></mat-datepicker>
+                    </mat-form-field>
+                    
+                    <label class="inputLeft">{{ 'name' | translate }} </label> <mat-slide-toggle></mat-slide-toggle>
+                    </mat-form-field>
+                    <p><button md-raised-button color="primary" class="mat-stroked-button" (click)="fileInput.click()">Upload</button>
+                        <input hidden type="file" #fileInput></p>     -->
+                    
+                        
+                </mat-card-content>
+            </mat-card>
+        </div>
+    </div>
+</div>      

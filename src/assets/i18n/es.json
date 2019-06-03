@@ -12,5 +12,11 @@
     "settings" : "Ajustes",
     "logout" : "Salir",
     "language" : "Idioma",
+    "name" : "Nombre",
+    "email" : "E-mail",
+    "newPassword" : "Nueva Contraseña",
+    "newPasswordConfirm" : "Confirmar Nueva Contraseña",
+    "submit" : "Enviar",
+    "cancel" : "Cancelar",
     "" : ""
 }

@@ -9,12 +9,19 @@ import { FormGroup, ReactiveFormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AdminComponent } from './admin/admin.component';
 import { MovimentoComponent } from './admin/movimento/movimento.component';
+import { ExtratoComponent } from './admin/extrato/extrato.component';
 import { HomeComponent } from './admin/home/home.component';
 import { RouterModule } from '@angular/router';
 
 import { HttpClientModule, HttpClient } from '@angular/common/http';
 import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
+import {NgxMaterialTimepickerModule} from 'ngx-material-timepicker';
+import {NumberPickerModule} from 'ng-number-picker';
+import {MatSelectModule} from '@angular/material/select';
+import { PerfilComponent } from './Ajustes/perfil.component';
+
 
 
 
@@ -24,7 +31,9 @@ import { TranslateHttpLoader } from '@ngx-translate/http-loader';
     LoginComponent,
     HomeComponent,
     AdminComponent,
-    MovimentoComponent
+    ExtratoComponent,
+    MovimentoComponent,
+    PerfilComponent
   ],
   imports: [
     BrowserModule,
@@ -34,6 +43,10 @@ import { TranslateHttpLoader } from '@ngx-translate/http-loader';
     BrowserAnimationsModule,
     HttpClientModule,
     RouterModule,
+    NgxMaterialTimepickerModule,
+    NgbModule,
+    NumberPickerModule,
+    MatSelectModule,
     TranslateModule.forRoot({
       loader: {
         provide: TranslateLoader,

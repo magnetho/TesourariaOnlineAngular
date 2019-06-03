@@ -5,6 +5,8 @@ import { AdminGuard } from './admin.guard';
 import { HomeComponent } from './admin/home/home.component';
 import { AdminComponent } from './admin/admin.component';
 import { MovimentoComponent } from './admin/movimento/movimento.component';
+import { ExtratoComponent } from './admin/extrato/extrato.component';
+import { PerfilComponent } from './Ajustes/perfil.component';
 
 const routes: Routes = [
     {
@@ -34,6 +36,16 @@ const routes: Routes = [
             {
                 path: 'movimento',
                 component: MovimentoComponent,
+                canActivate: [AdminGuard]
+            },
+            {
+                path: 'extrato',
+                component: ExtratoComponent,
+                canActivate: [AdminGuard]
+            },
+            {
+                path: 'perfil',
+                component: PerfilComponent,
                 canActivate: [AdminGuard]
             }
         ]
